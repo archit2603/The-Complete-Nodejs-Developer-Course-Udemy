@@ -25,7 +25,7 @@ yargs.command({
 
 // remove note command
 yargs.command({
-    comamnd: 'remove',
+    command: 'remove',
     describe: 'Remove a note',
     builder:{
         title:{
@@ -41,7 +41,7 @@ yargs.command({
 
 // list notes command
 yargs.command({
-    command: 'remove',
+    command: 'list',
     describe: 'List notes',
     handler(){
         notes.listNotes()
@@ -63,3 +63,5 @@ yargs.command({
         notes.readNote(argv.title)
     }
 })
+
+yargs.parse()
